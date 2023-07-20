@@ -1,5 +1,6 @@
 package com.vitorthemyth.myjetnews.ui
 
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.add
@@ -21,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.vitorthemyth.myjetnews.data.AppContainer
+import com.vitorthemyth.myjetnews.ui.components.AppNavRail
 import com.vitorthemyth.myjetnews.ui.theme.MyJetNewsTheme
 import kotlinx.coroutines.launch
 
@@ -58,7 +60,22 @@ fun MyNewsApp(
                 // Only enable opening the drawer via gestures if the screen is not expanded
                 gesturesEnabled = !isExpandedScreen
         ) {
+            Row {
+                if (isExpandedScreen) {
+                    AppNavRail(
+                            currentRoute = currentRoute,
+                            navigateToHome = navigationActions.navigateToHome,
+                            navigateToInterests = navigationActions.navigateToInterests,
+                    )
+                }
 
+                JetnewsNavGraph(
+                        appContainer = appContainer,
+                        isExpandedScreen = isExpandedScreen,
+                        navController = navController,
+                        openDrawer = { coroutineScope.launch { sizeAwareDrawerState.open() } },
+                )
+            }
         }
     }
 
