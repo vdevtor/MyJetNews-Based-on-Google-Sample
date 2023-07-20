@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyJetNews</string>
+    <!--Home screen-->
+    <string name="home_title">Home</string>
+
+    <!--interests screen-->
+    <string name="interests_title">Interests</string>
 </resources>

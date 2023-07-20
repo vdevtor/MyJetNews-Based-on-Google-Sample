@@ -22,6 +22,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.vitorthemyth.myjetnews.data.AppContainer
 import com.vitorthemyth.myjetnews.ui.theme.MyJetNewsTheme
+import kotlinx.coroutines.launch
 
 @Composable
 fun MyNewsApp(
@@ -46,7 +47,12 @@ fun MyNewsApp(
 
         ModalNavigationDrawer(
                 drawerContent = {
-
+                    AppDrawer(
+                            currentRoute = currentRoute,
+                            navigateToHome = navigationActions.navigateToHome,
+                            navigateToInterests = navigationActions.navigateToInterests,
+                            closeDrawer = { coroutineScope.launch { sizeAwareDrawerState.close() } }
+                    )
                 },
                 drawerState = sizeAwareDrawerState,
                 // Only enable opening the drawer via gestures if the screen is not expanded
