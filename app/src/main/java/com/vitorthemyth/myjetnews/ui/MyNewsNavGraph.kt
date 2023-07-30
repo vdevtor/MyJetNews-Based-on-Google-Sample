@@ -10,12 +10,15 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navDeepLink
 import com.vitorthemyth.myjetnews.MyNewsApplication.Companion.JETNEWS_APP_URI
 import com.vitorthemyth.myjetnews.data.AppContainer
+import com.vitorthemyth.myjetnews.ui.home.HomeRoute
 import com.vitorthemyth.myjetnews.ui.home.HomeViewModel
+import com.vitorthemyth.myjetnews.ui.interests.InterestsRoute
+import com.vitorthemyth.myjetnews.ui.interests.InterestsViewModel
 
 const val POST_ID = "postId"
 
 @Composable
-fun JetnewsNavGraph(
+fun MyNewsNavGraph(
         appContainer: AppContainer,
         isExpandedScreen: Boolean,
         modifier: Modifier = Modifier,
@@ -44,21 +47,21 @@ fun JetnewsNavGraph(
                     )
             )
 
-//            HomeRoute(
-//                    homeViewModel = homeViewModel,
-//                    isExpandedScreen = isExpandedScreen,
-//                    openDrawer = openDrawer,
-//            )
+            HomeRoute(
+                    homeViewModel = homeViewModel,
+                    isExpandedScreen = isExpandedScreen,
+                    openDrawer = openDrawer,
+            )
         }
-//        composable(MyNewsDestinations.INTERESTS_ROUTE) {
-//            val interestsViewModel: InterestsViewModel = viewModel(
-//                    factory = InterestsViewModel.provideFactory(appContainer.interestsRepository)
-//            )
-//            InterestsRoute(
-//                    interestsViewModel = interestsViewModel,
-//                    isExpandedScreen = isExpandedScreen,
-//                    openDrawer = openDrawer
-//            )
-//        }
+        composable(MyNewsDestinations.INTERESTS_ROUTE) {
+            val interestsViewModel: InterestsViewModel = viewModel(
+                    factory = InterestsViewModel.provideFactory(appContainer.interestsRepository)
+            )
+            InterestsRoute(
+                    interestsViewModel = interestsViewModel,
+                    isExpandedScreen = isExpandedScreen,
+                    openDrawer = openDrawer
+            )
+        }
     }
 }

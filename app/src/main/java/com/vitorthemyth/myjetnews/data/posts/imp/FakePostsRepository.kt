@@ -4,7 +4,7 @@ import com.vitorthemyth.myjetnews.data.Result
 import com.vitorthemyth.myjetnews.data.posts.PostsRepository
 import com.vitorthemyth.myjetnews.model.Post
 import com.vitorthemyth.myjetnews.model.PostsFeed
-import com.vitorthemyth.myjetnews.util.addOrRemove
+import com.vitorthemyth.myjetnews.utils.addOrRemove
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow

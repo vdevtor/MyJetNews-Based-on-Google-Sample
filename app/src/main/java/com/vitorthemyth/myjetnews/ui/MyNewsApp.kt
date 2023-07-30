@@ -61,6 +61,7 @@ fun MyNewsApp(
                 gesturesEnabled = !isExpandedScreen
         ) {
             Row {
+
                 if (isExpandedScreen) {
                     AppNavRail(
                             currentRoute = currentRoute,
@@ -69,7 +70,7 @@ fun MyNewsApp(
                     )
                 }
 
-                JetnewsNavGraph(
+                MyNewsNavGraph(
                         appContainer = appContainer,
                         isExpandedScreen = isExpandedScreen,
                         navController = navController,

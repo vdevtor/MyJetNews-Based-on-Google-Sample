@@ -8,7 +8,7 @@ import com.vitorthemyth.myjetnews.data.Result
 import com.vitorthemyth.myjetnews.data.posts.PostsRepository
 import com.vitorthemyth.myjetnews.model.Post
 import com.vitorthemyth.myjetnews.model.PostsFeed
-import com.vitorthemyth.myjetnews.util.ErrorMessage
+import com.vitorthemyth.myjetnews.utils.ErrorMessage
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map

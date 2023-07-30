@@ -1,4 +1,4 @@
-package com.vitorthemyth.myjetnews.util
+package com.vitorthemyth.myjetnews.utils
 
 import androidx.annotation.StringRes
 

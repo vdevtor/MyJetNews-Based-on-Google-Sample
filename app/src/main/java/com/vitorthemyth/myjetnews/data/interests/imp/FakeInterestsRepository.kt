@@ -4,7 +4,7 @@ import com.vitorthemyth.myjetnews.data.Result
 import com.vitorthemyth.myjetnews.data.interests.InterestSection
 import com.vitorthemyth.myjetnews.data.interests.InterestsRepository
 import com.vitorthemyth.myjetnews.data.interests.TopicSelection
-import com.vitorthemyth.myjetnews.util.addOrRemove
+import com.vitorthemyth.myjetnews.utils.addOrRemove
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update

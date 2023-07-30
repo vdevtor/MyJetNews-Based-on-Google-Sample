@@ -74,7 +74,7 @@ fun MyNewsLogo(modifier: Modifier = Modifier){
 }
 
 
-@Preview("Drawer contents")
+@Preview("Drawer contents", showBackground = true, showSystemUi = true, uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL, device = "spec:width=411dp,height=891dp", backgroundColor = 0xFFFFFFFF)
 @Preview("Drawer contents (dark)", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 fun PreviewAppDrawer() {
